@@ -1,1 +1,25 @@
+<<<<<<< HEAD
 hola kpocha.!!!
+=======
+git add archivo
+
+git status //vamos a ver que archivos se van a comitear
+
+git reset archivo // vamos a eliminar de la lista que se van a comitear
+
+git commit -m "mensaje del commit"
+
+git push origin [rama que vy a subir]
+
+git checkout -b [nombre de la rama]
+
+git pull origin [nombre de la rama]
+
+---------------------------------------------------------------------------------
+
+
+otra prueba
+
+
+diego  mira bultos
+>>>>>>> 2c14c0c97a469d62e9dad0ef8837ae0bc4f3acb1
