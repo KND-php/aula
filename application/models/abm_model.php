@@ -1,25 +1,26 @@
   <?php 
 class Abm_model extends CI_Model {
 
-   public function __construct()
-    {
-        parent::__construct();
-    }
-
-   /*
+   /*}
     * Vamos a buscar los libros de la base de datos con SQL. Gracias al framework podemos usar cualquier motorcito.
     * Ahora vamos a usar como el framework Codeigniter nos ofrece para hacerlo mas rapido.
     *
     * Let's find the books DB with SQL. Thanks to framewok we can use any engine.
     * 
     */
-    public function listar(){ 
+
+   function __construct()
+    {
+        parent::__construct();
+    }
+
+    function listar()
+    { 
        // $this->db->where('idlibros',$id);
         $sql = $this->db->get('usuario');
         return $sql->result();
     }
-
-     public function agregar($data){
+     function agregar($data){
      /* $this->db->insert('libros',array(
           'nombre'=> $nombre,
           (nombre,autor) VALUES 
@@ -28,11 +29,16 @@ class Abm_model extends CI_Model {
           'link' => $link
       ));*/
       $this->db->insert('usuario',$data);
+
+      $this->db->where('id','LAST_INSERT_ID()');
+      $sql = $this->db->get('usuario');
+      return $sql->result();
     }
+    
     //Chequear este metodo ya que por logica no puede andar como debe.
-    public function actualizar($data, $id){
+    function actualizar($data, $id){
       $this->db->where('id',$id);
-      $this->db->upgrade('usuario',$data)
+      $this->db->upgrade('usuario',$data);
     }
 
     /*public function comparar($data){
