@@ -1,3 +1,6 @@
 <?php
-echo $nombre.'<br>';
+echo $nombre;
+echo $autor;
+echo $tema;
+echo $link.'<br>';
 ?>
