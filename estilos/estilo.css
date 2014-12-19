@@ -13,9 +13,7 @@ p,body{
 }
 
 body{
-	background: url('../imagenes/fondo2.JPG');
 	background-attachment: fixed;
-	color: white;
 }
 header{
 	background: url('../imagenes/fondo.JPG');
@@ -103,10 +101,7 @@ header h1{
 .active a{
 	color: orange;
 }
-section{
-	background-color: black;
-	width: 100%
-}
+
 #contenido{
 	##background: #123;
 	
