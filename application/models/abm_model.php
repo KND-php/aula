@@ -20,6 +20,7 @@ class Abm_model extends CI_Model {
         $sql = $this->db->get('usuario');
         return $sql->result();
     }
+
      function agregar($data){
      /* $this->db->insert('libros',array(
           'nombre'=> $nombre,
@@ -30,9 +31,9 @@ class Abm_model extends CI_Model {
       ));*/
       $this->db->insert('usuario',$data);
 
-      $this->db->where('id','LAST_INSERT_ID()');
-      $sql = $this->db->get('usuario');
-      return $sql->result();
+      //$this->db->where('id','LAST_INSERT_ID()');
+      //$sql = $this->db->get('usuario');
+      //return $sql->result();
     }
     
     //Chequear este metodo ya que por logica no puede andar como debe.

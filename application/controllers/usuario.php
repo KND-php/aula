@@ -61,7 +61,7 @@ class Usuario extends CI_Controller
 
 		//$this->load->library('input');
 		//$dato = $this->input->post('dato');
-		$config = array(
+		/*$config = array(
                array(
                      'field'   => 'nombre',
                      'label'   => 'Nombre',
@@ -92,7 +92,17 @@ class Usuario extends CI_Controller
 		else
 		{
 			$this->load->view('contenido');
-		}
+		}*/
+
+		extract($_POST);
+		$data = array('nombre' => $nombre,
+					  //'apellido' => $apellido,
+					  'dni' => $dni,
+					  'telefono' => $tel,
+					  'usuario' => $user,
+					  'pass' => $pass );
+		$data['pass'] = md5($data['pass']);
+ 		$this->abm_model->agregar($data);
 				
 	}
 	public function listar_usuarios(){
