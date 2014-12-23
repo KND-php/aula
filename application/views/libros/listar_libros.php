@@ -10,13 +10,15 @@
 			<tr>
 				<td><?php echo $usuario->nombre; ?></td>
 				<td><?php echo $usuario->apellido; ?></td>
+				<td><?php echo $usuario->usuario; ?></td>
+				<td><?php echo $usuario->pass; ?></td>
 			</tr>
 		<?php } ?>
 
 	</table>
 	<button type="button" class="btn btn-primary" id="mostrar_form" onclick="mostrar()">Nuevo Usuario</button>
-	<div id="form" style="display: none;">
-		<?php echo validation_errors(); ?>
+	<div id="form" style="display: none; width: 80%; margin: auto;">
+		<?php echo validation_errors(); ?> 
 		<?php echo form_open('usuario/nuevo_usuario'); ?>
 
 		<!--<form role="form">-->
