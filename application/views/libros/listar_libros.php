@@ -24,7 +24,7 @@
 		<!--<form role="form">-->
 			<div class="form-group">
 			    <label >Nombre</label>
-			    <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+			    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
 		 	</div>
 		  	<div class="form-group">
 			    <label for="exampleInputEmail1">Correo</label>
