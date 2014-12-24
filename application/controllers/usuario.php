@@ -103,6 +103,8 @@ class Usuario extends CI_Controller
 					  'pass' => $pass );
 		$data['pass'] = md5($data['pass']);
  		$this->abm_model->agregar($data);
+
+ 		$this->listar_usuarios();
 				
 	}
 	public function listar_usuarios(){
