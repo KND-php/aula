@@ -5,12 +5,13 @@ class Materia extends CI_Controller {
     parent::__construct();
     $this->load->model('materia_model');
     $this->load->helper('url');
+    $this->load->helper('form');
     //$this->load->database('default');
   }
 
    function index()
    {
-      $this->listar();     
+      $this->listar_materias();     
       
 
    }
@@ -32,8 +33,10 @@ class Materia extends CI_Controller {
    }
 
    public function alta_materia(){
-
+    extract($_POST);
     $data = array('uid' => $uid,
+                  'nombre' => $nombre,
+                  'descripcion' => $descripcion,
                   'finicio' => $finicio,
                   'fcierre' => $fcierre);
     $this->materia_model->alta_materia($data);

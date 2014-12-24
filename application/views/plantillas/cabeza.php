@@ -3,5 +3,5 @@
     <nav>
           
     </nav>
-    <h2 class="text-center">Usuarios</h2>
+    <h2 class="text-center"><?php echo $title; ?></h2>
   </header>

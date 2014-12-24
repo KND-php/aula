@@ -6,11 +6,7 @@ class Materia_model extends CI_Model {
         parent::__construct();
     }
 
-  
-   
-
-
-    public function getid($id = null){
+     public function get($id = null){
     	$this->db->select()->from('materia');
     	//Cuando existe ID
     	if($id != null){
@@ -30,11 +26,6 @@ class Materia_model extends CI_Model {
     }
 
 
-    public function baja_materia($id){
-    	$this->db->where('id_materia',$id);
-    	$this->db->delete('materia');
-    }
-
 /*Esta función toma el id si existe y hace la modificación,
   sino ejecuta el alta de materia*/
     public function alta_materia($data)
@@ -49,16 +40,16 @@ class Materia_model extends CI_Model {
     }
 
 
+    public function baja_materia($id){
+      $this->db->where('id_materia',$id);
+      $this->db->delete('materia');
+    }
+
 
 // estos metodos son pruebas anteriores que podemos estudiar algún truquillo.. ;)
-   function listar_libros(){
-      $this->db->where('idlibros', '1'); 
-      //$this->db->where('clave', md5($clave)); 
-      $query = $this->db->get('libros');
-      if ($query->num_rows() > 0){
-         return $query->row();
-      }
-      return 0;
+   function listar(){
+      $sql = $this->db->get('materia');
+        return $sql->result();
    }
 
       function dame_ultimos_articulos(){
