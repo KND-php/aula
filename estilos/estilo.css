@@ -11,15 +11,18 @@ p,body{
 	letter-spacing: 0.01rem;
 	line-height: 1.5;
 }
-
+body {margin:0;padding:0;background:url(images/img01.jpg) repeat-x left top;text-align:justify;font-family:Georgia, "Times New Roman",Times,serif;font-size:12px;color:#616161}
+/*
 body{
 	background-attachment: fixed;
-}
+}*/
+
 header{
+	margin: 1%;
 	background: url('../imagenes/fondo.JPG');
 	background-attachment: fixed;
 	background-color: blue;
-	padding: 2%;
+	padding: 1%;
 }
 header img{
 	display: inline-block;
@@ -131,7 +134,13 @@ header h1{
 	text-align: center;
 	width: 25%;
 }
-#menu li {
+#menu {width:960px;margin:0 auto;padding:0;height:59px;background:url(images/img03.jpg) no-repeat left top}
+#menu ul {margin:0;padding-left:270px;list-style:none}
+#menu li {display:inline}
+#menu a {display:block;float:left;height:41px;margin:0;padding:18px 40px 0 40px;background:url(images/img08.jpg) no-repeat left 30%;text-decoration:none;text-transform:capitalize;font-family:Georgia, "Times New Roman",Times,serif;font-size:12px;color:#fff}
+#menu a:hover {color:#fff}
+#menu .current_page_item a {color:#fff}
+/*#menu li {
 	display: block;
 	border: dashed;
 	padding: 4px;
@@ -150,7 +159,7 @@ header h1{
 #menu a:hover{
 	color: orange;
 	font-size: 1.1em;
-}
+}*/
 .respuesta a{
 	color: white;
 	padding: 28px;
