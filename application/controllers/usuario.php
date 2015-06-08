@@ -93,6 +93,18 @@ class Usuario extends CI_Controller
 		{
 			$this->load->view('contenido');
 		}
+
+		extract($_POST);
+		$data = array('nombre' => $nombre,
+					  //'apellido' => $apellido,
+					  'dni' => $dni,
+					  'telefono' => $tel,
+					  'usuario' => $user,
+					  'pass' => $pass );
+		$data['pass'] = md5($data['pass']);
+ 		$this->abm_model->agregar($data);
+
+ 		$this->listar_usuarios();
 				
 	}
 	public function listar_usuarios(){
